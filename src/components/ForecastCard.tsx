@@ -35,17 +35,6 @@ const ForecastCard = ({setTemp, setIsCelsius, temp, isCelsius}: Props) => {
       })
       .catch(err => console.log(err))
   }, [weather])
-
-  // Change either celsius to farenheit or viceversa
-  const handleChangeTemp = () => {
-    if (isCelsius) {
-      setTemp(temp => Math.floor(temp! * 1.8 + 32))
-      setIsCelsius(false)
-    } else {
-      setTemp(temp => Math.floor((temp! - 32) * 0.5556))
-      setIsCelsius(true)
-    }
-  }
   
   console.log(forecast)
   

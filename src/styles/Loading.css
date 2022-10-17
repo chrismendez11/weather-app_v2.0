@@ -1,0 +1,33 @@
+.loading-container {
+    margin: 0 auto;
+    margin-top: calc(50vh - 116px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+.loader span {
+    font-size: 4.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    animation: blur 3s linear infinite;
+    line-height: 20px;
+    transition: all 0.5s;
+    letter-spacing: 0.2em;
+   }
+   
+   @keyframes blur {
+    0%, 90% {
+     filter: blur(0);
+    }
+   
+    50% {
+     filter: blur(10px);
+    }
+   }
+
+.loading__access-loc {
+    font-size: 1.8rem;
+    font-weight: 400;
+}

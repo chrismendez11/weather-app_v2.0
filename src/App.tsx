@@ -51,16 +51,16 @@ function App() {
     navigator.geolocation.getCurrentPosition(success)
   }, [])
 
-  const weather = useSelector((state: RootState)=> state.weather)
+  const weather = useSelector((state: RootState) => state.weather)
 
   return (
     <div className="App">
-      <nav className='nav__section'>
-        <CitiesSelector cities={cities}/>
+      {weather.name ? <><nav className='nav__section'>
+        <CitiesSelector cities={cities} />
       </nav>
-      <main className='main'>
-        {weather.name ? <><WeatherCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius}/><ForecastCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius}/></> : <Loading />}
-      </main>
+        <main className='main'>
+          <WeatherCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} /><ForecastCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} />
+        </main></> : <Loading />}
     </div>
   )
 }
