@@ -33,7 +33,6 @@ const WeatherCard = ({setTemp, setIsCelsius, temp, isCelsius}: Props) => {
     }
   }
 
-  console.log(weather)
 
   return (
     <section className='main__section'>

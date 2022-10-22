@@ -26,7 +26,6 @@ const ForecastCard = ({setTemp, setIsCelsius, temp, isCelsius}: Props) => {
       }
       api.forecast(info)
       .then(res => {
-        console.log(res)
         const array: ForecastList[] = []
         for (let i = 4; i < res.list.length; i += 8) {
           array.push(res.list[i]) 
@@ -36,7 +35,6 @@ const ForecastCard = ({setTemp, setIsCelsius, temp, isCelsius}: Props) => {
       .catch(err => console.log(err))
   }, [weather])
   
-  console.log(forecast)
   
   return (
     <section className='main__section'>

@@ -35,10 +35,12 @@ function App() {
         setCities((cities: City[]): City[] => {
           cities.unshift({
             name: res.name + ' ' + res.sys.country,
+            key: res.name,
             info: {
               lat: res.coord.lat,
               lon: res.coord.lon
-            }
+            },
+            img: ''
           })
           return [...cities]
         })
@@ -53,8 +55,27 @@ function App() {
 
   const weather = useSelector((state: RootState) => state.weather)
 
+  const [url, setUrl] = useState<string>()
+  const backgroundCity = () => {
+    if (weather.name) {
+      DATA.map(city => {
+        if (city.key == weather.name) {
+          setUrl(city.img)
+        }
+      })
+    } else {
+      return "nothing"
+    }
+    }
+
+  useEffect(() => {
+    backgroundCity()
+  }, [weather])
+
+  console.log(url)
+
   return (
-      <div className="App" style={{backgroundImage: `url('/src/assets/img/${weather.name}.jpg')`}}>
+      <div className="App" style={{backgroundImage: `url(${url})`}}>
         {weather.name ? <><nav className='nav__section'>
           <CitiesSelector cities={cities} />
         </nav>

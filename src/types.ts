@@ -55,7 +55,9 @@ export type LatLon = {
 
 export type City = {
   name: string,
-  info: LatLon
+  key: string,
+  info: LatLon,
+  img: string
 }
 
 export type Forecast = {
