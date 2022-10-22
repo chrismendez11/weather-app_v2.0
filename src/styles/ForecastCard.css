@@ -18,6 +18,8 @@ ul {
     border-radius: 2px;
     display: flex;
     justify-content: space-between;
+    background-color: #82a0bc;
+    box-shadow: -1px 3px 9px 0px rgba(0,0,0,0.75);
 }
 
 .forecast__info {
@@ -30,11 +32,13 @@ ul {
 .forecast__info h3 {
     font-size: 1.5rem;
     font-weight: 400;
+    color: #0d1b2a;
 }
 
 .forecast-description {
     font-size: 1.5rem;
     font-weight: 400;
+    color: #0d1b2a;
 }
 
 .forecast__data-cont {
@@ -46,6 +50,7 @@ ul {
 .forecast__data-cont li {
     font-size: 1.2rem;
     font-weight: 400;
+    color: #0d1b2a;
 }
 
 .forecast__title-cont {

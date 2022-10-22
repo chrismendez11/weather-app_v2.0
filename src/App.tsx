@@ -54,14 +54,14 @@ function App() {
   const weather = useSelector((state: RootState) => state.weather)
 
   return (
-    <div className="App">
-      {weather.name ? <><nav className='nav__section'>
-        <CitiesSelector cities={cities} />
-      </nav>
-        <main className='main'>
-          <WeatherCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} /><ForecastCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} />
-        </main></> : <Loading />}
-    </div>
+      <div className="App" style={{backgroundImage: `url('/src/assets/img/${weather.name}.jpg')`}}>
+        {weather.name ? <><nav className='nav__section'>
+          <CitiesSelector cities={cities} />
+        </nav>
+          <main className='main'>
+            <WeatherCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} /><ForecastCard setTemp={setTemp} setIsCelsius={setIsCelsius} temp={temp} isCelsius={isCelsius} />
+          </main></> : <Loading />}
+      </div>
   )
 }
 

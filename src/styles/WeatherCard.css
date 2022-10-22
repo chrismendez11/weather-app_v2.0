@@ -11,6 +11,10 @@
     font-size: 3.6rem;
     font-weight: 400;
     text-align: center;
+    color: #0d1b2a;
+    background-color: rgba(237, 242, 244, 0.7);
+    padding: 0 20px;
+    border-radius: 3px;
 }
 
 .weather-card {
@@ -23,11 +27,14 @@
     text-align: center;
     padding: 40px;
     gap: 20px;
+    background-color: #82a0bc;
+    box-shadow: -1px 3px 13px 0px rgba(0,0,0,0.75);
 }
 
 .weather-name {
     font-size: 3.0rem;
     font-weight: 500;
+    color: #0d1b2a;
 }
 
 .weather-card__main {
@@ -48,6 +55,7 @@
 .img-cont span {
     font-size: 2.4rem;
     font-weight: 500;
+    color: #0d1b2a;
 }
 
 .info-cont {
@@ -62,6 +70,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     font-style: italic;
+    color: #0d1b2a;
 }
 
 .weather-info__cont {
@@ -73,6 +82,7 @@
 .weather-info__cont span {
     font-size: 1.6rem;
     font-weight: 400;
+    color: #0d1b2a;
 }
 
 .weather-card__footer {
@@ -89,6 +99,7 @@
     border: 1px solid black;
     font-size: 1.8rem;
     font-weight: 400;
+    background-color: #edf2f4;
 }
 
 @media (min-width: 866px) {

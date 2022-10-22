@@ -9,7 +9,7 @@ export const DATA = [
         info:  {
             lat: 25.761681,
             lon: -80.191788
-        }
+        },
     },
     {
         name: "London UK",
@@ -41,7 +41,7 @@ export const DATA = [
     }
 ]
 
-export const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octuber", "November", "December"]
+export const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 export const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
